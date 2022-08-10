@@ -1,0 +1,24 @@
+<resources>
+    <!-- General -->
+    <string name="app_name">GNB</string>
+    <string name="loading">Loading...</string>
+
+    <!-- Products fragment -->
+    <string name="products_list_label">Products</string>
+    <plurals name="products_list_transactions">
+        <item quantity="one">%d transaction</item>
+        <item quantity="many">%d transactions</item>
+        <item quantity="other">%d transactions</item>
+    </plurals>
+
+    <!-- Transactions fragment -->
+    <string name="transactions_sum">Total: %s %s</string>
+    <string name="transactions_label">Transactions</string>
+
+    <!-- Messages -->
+    <string name="error_no_transactions">No transactions found for this sku</string>
+    <string name="error_no_products">No products found</string>
+    <string name="error_something_wrong">Ooops.... something went wrong!!!</string>
+    <string name="error_no_internet">Ooops.... it seems that you don\'t have internet connection...</string>
+    <string name="error_reload">Reload</string>
+</resources>
