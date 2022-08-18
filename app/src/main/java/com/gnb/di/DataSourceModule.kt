@@ -12,20 +12,25 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ActivityComponent
+import javax.inject.Singleton
 
 @Module
 @InstallIn(ActivityComponent::class)
 object DataSourceModule {
 
+    @Singleton
     @Provides
     fun provideRatesRemoteDataSource(apiService: ApiService) : IRatesDataSource.IRatesRemoteDataSource = RatesRemoteDataSource(apiService)
 
+    @Singleton
     @Provides
     fun provideTransactionsRemoteDataSource(apiService: ApiService) : ITransactionsDataSource.ITransactionsRemoteDataSource = TransactionsRemoteDataSource(apiService)
 
+    @Singleton
     @Provides
     fun provideRatesLocalDataSource(appDatabase: LocalDatabase) : IRatesDataSource.IRatesLocalDataSource = RatesLocalDataSource(appDatabase.rateDao())
 
+    @Singleton
     @Provides
     fun provideTransactionsLocalDataSource(appDatabase: LocalDatabase) : ITransactionsDataSource.ITransactionsLocalDataSource = TransactionsLocalDataSource(appDatabase.transactionDao())
 

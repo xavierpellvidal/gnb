@@ -12,15 +12,18 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ActivityComponent
+import javax.inject.Singleton
 
 @Module
 @InstallIn(ActivityComponent::class)
 object RepositoryModule {
 
+    @Singleton
     @Provides
     fun provideTransactionRepository(remoteDataSource: TransactionsRemoteDataSource, localDataSource: TransactionsLocalDataSource):
             ITransactionsRepository = TransactionsRepository(remoteDataSource, localDataSource)
 
+    @Singleton
     @Provides
     fun provideRatesRepository(remoteDataSource: RatesRemoteDataSource, localDataSource: RatesLocalDataSource):
             IRatesRepository = RatesRepository(remoteDataSource, localDataSource)

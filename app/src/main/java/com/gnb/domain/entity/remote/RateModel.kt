@@ -16,18 +16,6 @@ data class RateModel(
 
 
 
-fun solution(T: Array<String>, R: Array<String>): Int {
-    // write your code in Kotlin 1.3.11 (Linux)
-    var score: Int = 0
-    var result: List<Test> = T.zip(R) {n, f -> Test(n, f)}
-
-    return score;
-}
-
-class Test(
-    var name: String,
-    var result: String
-)
 
 
 
